@@ -17,8 +17,7 @@ development:
   encoding: unicode
   database: nonprofitam-infrastructure-checklist_development
   pool: 5
-  username: nonprofitam-infrastructure-checklist
-  password:
+
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -43,13 +42,11 @@ test:
   encoding: unicode
   database: nonprofitam-infrastructure-checklist_test
   pool: 5
-  username: nonprofitam-infrastructure-checklist
-  password:
+
 
 production:
   adapter: postgresql
   encoding: unicode
   database: nonprofitam-infrastructure-checklist_production
   pool: 5
-  username: nonprofitam-infrastructure-checklist
-  password:
+
