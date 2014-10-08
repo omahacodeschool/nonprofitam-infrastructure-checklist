@@ -36,13 +36,19 @@ class ChecklistsController < ApplicationController
   end
   
   
+  def destroy
+    @checklist = Checklist.find(params[:id])
+    @checklist.delete
+    
+    redirect_to checklists_path
+  end
+  
+  
   def show 
     @checklist = Checklist.find(params[:id])
   end
   
   
-  def destroy 
-  end
   
   
   

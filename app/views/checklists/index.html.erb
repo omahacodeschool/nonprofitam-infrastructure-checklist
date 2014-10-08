@@ -1,8 +1,18 @@
 <% @checklists.each do |c|%>
 
-<p>
-<%= link_to c.name, checklist_path(c.id) %>----<%= link_to 'Edit', edit_checklist_path(c.id) %> ----
-</p>
+  <% if current_user.admin %>
 
+    <p>
+      <%= link_to c.name, checklist_path(c.id) %>----<%= link_to 'Edit', edit_checklist_path(c.id) %> ----<% if c.name == nil%><% else %> <%= link_to 'Delete', checklist_path(c.id), :action => :post, :method => :delete %><% end %>
+    </p>
+    <br>
+    <br>
+    <h3><%= link_to "New Checklist", new_checklist_path %></h3>
+
+  <% else %>
+    <br>
+    <%= link_to c.name, new_response_path(c.id) %>
+
+  <% end %>
 
 <% end %>
