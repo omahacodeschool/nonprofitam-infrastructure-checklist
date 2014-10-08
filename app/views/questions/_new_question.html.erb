@@ -1,9 +1,12 @@
+<% x = Time.now.getutc %>
+<div class= "question_form_rendered">
 
 <p>
-  <%= builder.label :Question_text %>
-  <%= builder.text_area :description %>
+  <%= label_tag "checklist[questions_attributes][#{x}][description]", "Question text"%>
+  <%= text_area_tag "checklist[questions_attributes][#{x}][description]", nil, size: "40x20" %>
     
      
-  <%= builder.select(:priority, options_for_select([['Required', 'Required'], ['Strongly Recommended', 'Strongly Recommended'],['Recommended','Recommended']]), :prompt => "Priority") %>
+  <%= select_tag "checklist[questions_attributes][#{x}][priority]", options_for_select([['Required', 'Required'], ['Strongly Recommended', 'Strongly Recommended'],['Recommended','Recommended']]), :prompt => "Priority" %>
 
 </p>
+</div>

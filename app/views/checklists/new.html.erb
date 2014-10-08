@@ -12,13 +12,15 @@
      
       <%= builder.select(:priority, options_for_select([['Required', 'Required'], ['Strongly Recommended', 'Strongly Recommended'],['Recommended','Recommended']]), :prompt => "Priority") %>
       
-      <div class = "question_form"></div>
-      
       <% end %>
+      
 </p>
 
-  
+<div class = "question_form"></div>
+
 <%= link_to "Add Question", new_question_path, remote: true %>
-  <%= f.submit %>
+
+ <%= f.submit %>
 
   <% end %>
+  
