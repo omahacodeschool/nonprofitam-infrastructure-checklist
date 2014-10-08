@@ -1,0 +1,9 @@
+<h1><%= @checklist.name %></h1>
+
+<% @checklist.questions.each do |q| %>
+
+<p>
+  <%= q.description %> ---- <%= q.priority %>
+</p>
+
+<% end %>

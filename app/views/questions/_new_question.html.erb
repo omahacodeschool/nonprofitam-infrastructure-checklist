@@ -1,0 +1,9 @@
+
+<p>
+  <%= builder.label :Question_text %>
+  <%= builder.text_area :description %>
+    
+     
+  <%= builder.select(:priority, options_for_select([['Required', 'Required'], ['Strongly Recommended', 'Strongly Recommended'],['Recommended','Recommended']]), :prompt => "Priority") %>
+
+</p>

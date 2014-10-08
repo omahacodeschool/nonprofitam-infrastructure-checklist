@@ -1,7 +1,8 @@
 <% @checklists.each do |c|%>
 
 <p>
-<%= link_to c.name, "#" %>
+<%= link_to c.name, checklist_path(c.id) %>----<%= link_to 'Edit', edit_checklist_path(c.id) %> ----
 </p>
+
 
 <% end %>
