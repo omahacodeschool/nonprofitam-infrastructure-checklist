@@ -1,0 +1,19 @@
+<%= form_for @checklist do |f| %>
+
+
+<%= f.label :name %>
+<%= f.text_field :name %>
+<br>
+    <%= f.fields_for :questions do |builder| %>
+  <p>
+      <%= builder.label :Question_text %>
+      <%= builder.text_area :description %>
+    
+     
+      <%= builder.select(:priority, options_for_select([['Required', 'Required'], ['Strongly Recommended', 'Strongly Recommended'],['Recommended','Recommended']]), :prompt => "Priority") %>
+      
+      <% end %>
+</p>
+  <%= f.submit %>
+
+  <% end %>

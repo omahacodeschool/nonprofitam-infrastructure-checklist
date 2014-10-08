@@ -1,6 +1,9 @@
 class User < ActiveRecord::Base
    attr_accessible :email, :password, :password_confirmation, :org_name, :admin
   
+   has_one :response
+  
+  
   authenticates_with_sorcery!
   
  

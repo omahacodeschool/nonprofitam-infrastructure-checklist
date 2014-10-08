@@ -8,6 +8,7 @@ NonprofitamInfrastructureChecklist::Application.routes.draw do
   get "signup" => "users#new", :as => "signup"
   resources :users
   resources :sessions
+  resources :checklists
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
