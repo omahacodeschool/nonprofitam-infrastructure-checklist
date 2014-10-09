@@ -1,7 +1,8 @@
 <h1>Responses#edit</h1>
 
 
-<%= @response.answers_hash %>
+<%= @response.answers_hash.to_a %>
+
 
 	<%= form_for @response do |f| %>
 
@@ -13,15 +14,15 @@
 					  <tr>
 					    <td>Item: <%= c.description %></td>
 							<td>		
-								<%= radio_button_tag(name ="spaceship[#{c.id}]", value = "Yes") %>
+								<%= radio_button_tag(name ="spaceship[#{c.id}]", value = "Yes", checked = false) %>
 								<%= label_tag(:answers_hash, "Yes") %>
 							</td>
 							<td>
-								<%= radio_button_tag(name ="spaceship[#{c.id}]", value = "No") %>
+								<%= radio_button_tag(name ="spaceship[#{c.id}]", value = "No", checked = true) %>
 								<%= label_tag(:answers_hash, "No") %>
 							</td>
-							<td>
-								<%= radio_button_tag(name ="spaceship[#{c.id}]", value = "In Progress") %>
+							<td>a
+								<%= radio_button_tag(name ="spaceship[#{c.id}]", value = "In Progress", checked = false) %>
 								<%= label_tag(:answers_hash, "In Progress") %>
 							</td>
 					  </tr>
@@ -74,8 +75,11 @@
 
 		<% end %>
 	
-	<%= f.submit %>
-<%end%>
+		<%= f.submit %>
+		
+	<%end%>
+	
+
 
 
 
