@@ -3,40 +3,59 @@
 
 <%= @response.answers_hash %>
 
+	<%= form_for @response do |f| %>
 
-	<% @checklist.questions.each do |c| %>
-		<% if c.priority == "Required" %>
-			<p>
-				<h2>REQUIRED:</h2>
-				<table>
-				  <tr>
-				    <td>Item: <%= c.description %></td>
-						<td>Yes</td>
-						<!-- TODO add checkboxes! -->
+		<% @checklist.questions.each do |c| %>
+			<% if c.priority == "Required" %>
+				<p>
+					<h2>REQUIRED:</h2>
+					<table>
+					  <tr>
+					    <td>Item: <%= c.description %></td>
+							<td>		
+								<%= check_box_tag(:answers_hash) %>
+								<%= label_tag(:answers_hash, "Yes") %>
+							</td>
+							<td><%= check_box_tag(:answers_hash) %>
+								<%= label_tag(:answers_hash, "No") %></td>
+							<td><%= check_box_tag(:answers_hash) %>
+								<%= label_tag(:answers_hash, "In Progress") %></td>
+							<!-- TODO add checkboxes! -->
 						
-				  </tr>
-				</table>
-			</p>
-		<% elsif c.priority == "Strongly Recommended"%>
-			<p>
-				<h2>STRONGLY RECOMMENDED:</h2>
-				<table>
-				  <tr>
-				    <td>Item: <%= c.description %></td>
-				  </tr>
-				</table>
-			</p>
-		<% else %>
-			<p>
-				<h2>RECOMMENDED:</h2>
-				<table>
-				  <tr>
-				    <td>Item: <%= c.description %></td>
-				  </tr>
-				</table>
-			</p>
-		<% end %>
+					  </tr>
+					</table>
+				</p>
+			<% elsif c.priority == "Strongly Recommended"%>
+				<p>
+					<h2>STRONGLY RECOMMENDED:</h2>
+					<table>
+					  <tr>
+					    <td>Item: <%= c.description %></td>
+							<td>Yes<%= c.id %></td>
+							<td>No<%= c.id %></td>
+							<td>In Progress<%= c.id %></td>
+					  </tr>
+					</table>
+				</p>
+			<% elsif c.priority == "Recommended" %>
+				<p>
+					<h2>RECOMMENDED:</h2>
+					<table>
+					  <tr>
+					    <td>Item: <%= c.description %></td>
+							<td>Yes<%= c.id %></td>
+							<td>No<%= c.id %></td>
+							<td>In Progress<%= c.id %></td>
+					  </tr>
+					</table>
+				</p>
+			<% else %>
+			<% end %>
 
-	<% end %>
+		<% end %>
+	
+	<%= f.submit %>
+<%end%>
+
 
 
