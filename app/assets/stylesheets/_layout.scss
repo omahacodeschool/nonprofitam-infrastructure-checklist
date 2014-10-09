@@ -1,0 +1,22 @@
+body{
+  width: 95%;
+  margin: 0 auto;
+}
+
+#logo{
+  width: 100%;
+  padding-top:30px;
+}
+
+
+h1#namlogo {
+  width: 100%; 
+  height:100px;
+  background-position: left center; 
+  background: url("/Nam_Logo.png") no-repeat;
+  background-size: 100%;
+  float: left;
+  text-indent: -9999px;
+  z-index: -2;
+}
+
