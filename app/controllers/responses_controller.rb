@@ -4,8 +4,7 @@ class ResponsesController < ApplicationController
   end
   
   def new
-    @response = Response.new
-    @checklist = Checklist.find(params[:id])
+   
   end
 
   def create
@@ -18,6 +17,8 @@ class ResponsesController < ApplicationController
   end
 
   def edit
+    @response = Response.new
+    @checklist = Checklist.find(params[:id])
   end
 
   def update

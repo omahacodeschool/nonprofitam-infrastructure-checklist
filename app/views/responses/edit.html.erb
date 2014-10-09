@@ -1,9 +1,35 @@
 <h1>Responses#edit</h1>
-<p>Find me in app/views/responses/edit.html.erb</p>
 
-<% @checklist.questions.each do |c| %>
+	<% @checklist.questions.each do |c| %>
+		<% if c.priority == "Required" %>
+			<p>
+				<h2>REQUIRED:</h2>
+				<table>
+				  <tr>
+				    <td>Item: <%= c.description %></td>
+				  </tr>
+				</table>
+			</p>
+		<% elsif c.priority == "Strongly Recommended"%>
+			<p>
+				<h2>STRONGLY RECOMMENDED:</h2>
+				<table>
+				  <tr>
+				    <td>Item: <%= c.description %></td>
+				  </tr>
+				</table>
+			</p>
+		<% else %>
+			<p>
+				<h2>RECOMMENDED:</h2>
+				<table>
+				  <tr>
+				    <td>Item: <%= c.description %></td>
+				  </tr>
+				</table>
+			</p>
+		<% end %>
+
+	<% end %>
 
 
-<%= c.description %>, <%= c.priority %>
-
-<% end %>
