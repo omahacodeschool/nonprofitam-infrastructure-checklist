@@ -2,7 +2,11 @@
 <% elsif current_user.admin %>
 <% @checklists.each do |c|%>
   <p>
-    <%= link_to c.name, checklist_path(c.id) %>----<%= link_to 'Edit', edit_checklist_path(c.id) %> ----<% if c.name == 				nil%><% else %> <%= link_to 'Delete', checklist_path(c.id), :action => :post, :method => :delete %><% end %>
+    <%= link_to c.name, checklist_path(c.id) %>----<%= link_to 'Edit', edit_checklist_path(c.id) %> ----
+			<% if c.name ==nil%>
+			<% else %> 
+				<%= link_to 'Delete', checklist_path(c.id), :action => :post, :method => :delete %>
+			<% end %>
   </p>
   <br>
   <br>
@@ -12,8 +16,9 @@
 <% else %>
   <br>
   <% @checklists.each do |c|%>
-  <%= link_to c.name, new_response_path(c.id) %>
-
+	<p>
+  	<%= link_to c.name, edit_response_path(c.id), id: c.id %>
+	</p>
 <% end %>
 
 <% end %>

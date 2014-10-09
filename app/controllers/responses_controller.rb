@@ -1,18 +1,21 @@
 class ResponsesController < ApplicationController
   
+  def index
+  end
+  
   def new
     @response = Response.new
     @checklist = Checklist.find(params[:id])
   end
 
   def create
-   @response = Response.new
-   if @response.save
+  @response = Response.new
+    if @response.save
      redirect_to :root
-   else
+    else
      render :new
+    end
   end
-end
 
   def edit
   end
