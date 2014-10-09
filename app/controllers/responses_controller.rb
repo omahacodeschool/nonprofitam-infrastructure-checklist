@@ -19,9 +19,9 @@ class ResponsesController < ApplicationController
 
   def update
     @response = current_user.response
-    binding.pry
     @response.update_attributes(answers_hash: {params[:name] => params[:value]})
     redirect_to root_url
+    
   end
 
   def show
