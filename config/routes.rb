@@ -1,13 +1,17 @@
 NonprofitamInfrastructureChecklist::Application.routes.draw do
  
-  root :to => 'users#index' 
+  root :to => 'checklists#index' 
   
   get "logout" => "sessions#destroy", :as => "logout"
   get "login" => "sessions#new", :as => "login"
 
   get "signup" => "users#new", :as => "signup"
+  
+  resources :responses
+  resources :questions
   resources :users
   resources :sessions
+  resources :checklists
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
