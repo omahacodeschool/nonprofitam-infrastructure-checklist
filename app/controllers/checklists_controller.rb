@@ -15,7 +15,7 @@ class ChecklistsController < ApplicationController
   def create 
     @checklist = Checklist.new(params[:checklist])
     if @checklist.save 
-      redirect_to checklists_path, :notice => "Checklists created!" 
+      redirect_to checklists_path, :notice => "Checklist created!" 
     else 
       render :new
     end

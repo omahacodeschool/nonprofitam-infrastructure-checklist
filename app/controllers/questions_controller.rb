@@ -10,4 +10,7 @@ class QuestionsController < ApplicationController
       format.html
   end
 end
+
+
+
 end
