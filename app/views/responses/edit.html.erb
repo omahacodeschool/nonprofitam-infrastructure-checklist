@@ -13,15 +13,17 @@
 					  <tr>
 					    <td>Item: <%= c.description %></td>
 							<td>		
-								<%= check_box_tag(:answers_hash) %>
+								<%= radio_button_tag(c.id, value = "Yes") %>
 								<%= label_tag(:answers_hash, "Yes") %>
 							</td>
-							<td><%= check_box_tag(:answers_hash) %>
-								<%= label_tag(:answers_hash, "No") %></td>
-							<td><%= check_box_tag(:answers_hash) %>
-								<%= label_tag(:answers_hash, "In Progress") %></td>
-							<!-- TODO add checkboxes! -->
-						
+							<td>
+								<%= radio_button_tag(c.id, value = "No") %>
+								<%= label_tag(:answers_hash, "No") %>
+							</td>
+							<td>
+								<%= radio_button_tag(c.id, value = "In Progress") %>
+								<%= label_tag(:answers_hash, "In Progress") %>
+							</td>
 					  </tr>
 					</table>
 				</p>
@@ -31,9 +33,18 @@
 					<table>
 					  <tr>
 					    <td>Item: <%= c.description %></td>
-							<td>Yes<%= c.id %></td>
-							<td>No<%= c.id %></td>
-							<td>In Progress<%= c.id %></td>
+							<td>		
+								<%= radio_button_tag(c.id, value = "Yes") %>
+								<%= label_tag(:answers_hash, "Yes") %>
+							</td>
+							<td>
+								<%= radio_button_tag(c.id, value = "No") %>
+								<%= label_tag(:answers_hash, "No") %>
+							</td>
+							<td>
+								<%= radio_button_tag(c.id, value = "In Progress") %>
+								<%= label_tag(:answers_hash, "In Progress") %>
+							</td>
 					  </tr>
 					</table>
 				</p>
@@ -43,9 +54,18 @@
 					<table>
 					  <tr>
 					    <td>Item: <%= c.description %></td>
-							<td>Yes<%= c.id %></td>
-							<td>No<%= c.id %></td>
-							<td>In Progress<%= c.id %></td>
+							<td>		
+								<%= radio_button_tag(c.id, value = "Yes") %>
+								<%= label_tag(:answers_hash, "Yes") %>
+							</td>
+							<td>
+								<%= radio_button_tag(c.id, value = "No") %>
+								<%= label_tag(:answers_hash, "No") %>
+							</td>
+							<td>
+								<%= radio_button_tag(c.id, value = "In Progress") %>
+								<%= label_tag(:answers_hash, "In Progress") %>
+							</td>
 					  </tr>
 					</table>
 				</p>

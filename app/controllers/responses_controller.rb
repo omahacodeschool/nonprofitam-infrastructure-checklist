@@ -8,12 +8,7 @@ class ResponsesController < ApplicationController
   end
 
   def create
-  @response = Response.new
-    if @response.save
-     redirect_to :root
-    else
-     render :new
-    end
+  
   end
 
   def edit
@@ -23,6 +18,9 @@ class ResponsesController < ApplicationController
   end
 
   def update
+    @response = current_user.response
+    @response.update_attributes(answers_hash: {params[:name] => params[:value]})
+    redirect_to root_url
   end
 
   def show
