@@ -17,7 +17,8 @@ class ResponsesController < ApplicationController
   end
 
   def edit
-    @response = Response.new
+    @response = current_user.response
+    # @response.import_checklist
     @checklist = Checklist.find(params[:id])
   end
 

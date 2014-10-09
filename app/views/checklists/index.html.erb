@@ -1,5 +1,6 @@
 <% if current_user == nil %>
 <% elsif current_user.admin %>
+<h1>Checklists</h1>
 <% @checklists.each do |c|%>
   <p>
     <%= link_to c.name, checklist_path(c.id) %>----<%= link_to 'Edit', edit_checklist_path(c.id) %> ----
@@ -14,7 +15,7 @@
   <h3><%= link_to "New Checklist", new_checklist_path %></h3>
 
 <% else %>
-  <br>
+<h1>Click a checklist to fill out!</h1>
   <% @checklists.each do |c|%>
 	<p>
   	<%= link_to c.name, edit_response_path(c.id), id: c.id %>

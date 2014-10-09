@@ -1,5 +1,9 @@
 <h1>Responses#edit</h1>
 
+
+<%= @response.answers_hash %>
+
+
 	<% @checklist.questions.each do |c| %>
 		<% if c.priority == "Required" %>
 			<p>
@@ -7,6 +11,9 @@
 				<table>
 				  <tr>
 				    <td>Item: <%= c.description %></td>
+						<td>Yes</td>
+						<!-- TODO add checkboxes! -->
+						
 				  </tr>
 				</table>
 			</p>

@@ -4,4 +4,8 @@ class Response < ActiveRecord::Base
   serialize(:answers_hash, Hash)
   belongs_to :user
   
+  def import_checklist
+    Response.create({user_id: user.id, answers_hash: {question.id => ""}})
+  end
+  
 end
