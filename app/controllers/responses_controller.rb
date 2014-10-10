@@ -18,7 +18,7 @@ class ResponsesController < ApplicationController
 
   def update
     @response = current_user.response
-    @response.update_attributes(answers_hash: params[:spaceship])
+    @response.update_attributes(answers_hash: @response.answers_hash.merge!(params[:spaceship]))
     redirect_to checklists_path
     
   end

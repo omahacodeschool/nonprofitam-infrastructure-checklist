@@ -1,5 +1,5 @@
 class Response < ActiveRecord::Base
-  attr_accessible :answers_hash, :user_id
+  attr_accessible :answers_hash, :user_id, :answer_hash["key"]
   
   serialize(:answers_hash, Hash)
   belongs_to :user
@@ -10,7 +10,6 @@ class Response < ActiveRecord::Base
     a_hash = self.answers_hash
     answers = a_hash.values
     answers.each{ |ans| count[ans] += 1}
-    
     count[n]
   end
   
