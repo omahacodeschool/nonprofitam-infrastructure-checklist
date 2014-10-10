@@ -9,6 +9,7 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     if @user.save
       @user.create_response
+      auto_login(@user)
       redirect_to root_url, :notice => "Signed up!"
     else 
       render :new
