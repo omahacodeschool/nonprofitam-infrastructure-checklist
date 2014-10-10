@@ -3,5 +3,5 @@ class Response < ActiveRecord::Base
   
   serialize(:answers_hash, Hash)
   belongs_to :user
-    
+      
 end

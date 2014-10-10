@@ -1,7 +1,7 @@
 <h1>Responses#edit</h1>
 
 
-<%= @response.answers_hash.to_a %>
+<%= @response.answers_hash %>
 
 
 	<%= form_for @response do |f| %>
@@ -22,7 +22,7 @@
 								<%= label_tag(:answers_hash, "No") %>
 							</td>
 							<td>
-								<%= radio_button_tag("spaceship[#{c.id}]", "In Progress", (@response.answers_hash["#{c.id}"]== "In 								Progress")) %>
+								<%= radio_button_tag("spaceship[#{c.id}]", "In Progress", (@response.answers_hash["#{c.id}"]== "In Progress")) %>
 								<%= label_tag(:answers_hash, "In Progress") %>
 							</td>
 					  </tr>
@@ -43,7 +43,7 @@
 								<%= label_tag(:answers_hash, "No") %>
 							</td>
 							<td>
-								<%= radio_button_tag("spaceship[#{c.id}]", "In Progress", (@response.answers_hash["#{c.id}"]== "In 								Progress")) %>
+								<%= radio_button_tag("spaceship[#{c.id}]", "In Progress", (@response.answers_hash["#{c.id}"]== "In Progress")) %>
 								<%= label_tag(:answers_hash, "In Progress") %>
 							</td>
 					  </tr>
@@ -65,7 +65,7 @@
 							</td>
 							<td>
 								<td>
-									<%= radio_button_tag("spaceship[#{c.id}]", "In Progress", (@response.answers_hash["#{c.id}"] == "In 										Progress")) %>
+									<%= radio_button_tag("spaceship[#{c.id}]", "In Progress", (@response.answers_hash["#{c.id}"] == "In Progress")) %>
 									<%= label_tag(:answers_hash, "In Progress") %>
 								</td>
 					  </tr>

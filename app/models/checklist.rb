@@ -4,4 +4,12 @@ class Checklist < ActiveRecord::Base
   
   has_many :questions 
   accepts_nested_attributes_for :questions, allow_destroy: true
+  
+  
+  def total_c_questions(n)
+    @checklist = Checklist.find(n)
+    @total =  @checklist.questions.length
+    @total 
+  end
+    
 end

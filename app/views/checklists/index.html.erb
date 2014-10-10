@@ -19,6 +19,8 @@
   <% @checklists.each do |c|%>
 	<p>
   	<%= link_to c.name, edit_response_path(c.id), id: c.id %>
+		<%= c.total_c_questions(c.id)%>
+		<%= c.yes_response(c.id)%>
 	</p>
 <% end %>
 
