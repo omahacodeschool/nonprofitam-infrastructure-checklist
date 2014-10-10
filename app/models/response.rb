@@ -1,3 +1,4 @@
+
 class Response < ActiveRecord::Base
   attr_accessible :answers_hash, :user_id, :answer_hash["key"]
   
@@ -35,7 +36,7 @@ class Response < ActiveRecord::Base
   # checklist_id - id of a Active Record checklist's associated questions that correspond to the keys in a Response object's "answer_hash"
   #
   # This is calculated with the current_user's response object found using the session 
-  #     ie current_user.response.id
+  #     ie current_user.responseid
   #
   # Examples
   #
