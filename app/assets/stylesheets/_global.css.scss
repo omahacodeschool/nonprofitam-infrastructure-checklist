@@ -1,0 +1,25 @@
+$nam-blue: #1B5AA9;
+$nam-grey: #B6B6B9;
+$nam-yellow: #ffc300;
+
+$body-font:'Roboto Condensed', sans-serif;
+$header-font: 'Raleway', sans-serif;;
+
+h2{
+  font: 20px $header-font;
+  color: $nam-blue;
+  letter-spacing: .5px;
+  //text-transform: uppercase;
+}
+
+p {
+  font: 16px $body-font;
+  
+}
+
+
+@import "normalize";
+@import "box-sizing";
+@import "layout";
+
+

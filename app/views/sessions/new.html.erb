@@ -5,8 +5,8 @@
     <%= text_field :email, params[:email] %>
   </div>
   <div class="field">
-    <%= label_tag :password %>
-    <%= password_field_tag :password %>
+ 
+    <%= password_field_tag 'password', "Please enter your password" %>
   </div>
   <div class="actions"><%= submit_tag "Log in" %></div>
 <% end %>

@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>NonprofitamInfrastructureChecklist</title>
+  <title>Non-profit Infrastructure Checklist</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+ <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300' rel='stylesheet' type='text/css'>
+ <link href='http://fonts.googleapis.com/css?family=Raleway:500' rel='stylesheet' type='text/css'>
 </head>
 <body>
   <% if current_user %>
-    Logged in as <%= current_user.email %>.
-    <%= link_to "Log out", logout_path %>
+  <p class='current_user'> Hello, <%= current_user.email %>.
+    <%= link_to "Log out", logout_path %></p>
+  
   <% else %>
-    <%= link_to "Sign up", signup_path %> or
-    <%= link_to "log in", login_path %>.
-  <% end %>
+    <p class='current_user'><%= link_to "Sign up", signup_path %> or
+    <%= link_to "log in", login_path %>.</p>
+  <% end %></p>
   
 
 <%= yield %>

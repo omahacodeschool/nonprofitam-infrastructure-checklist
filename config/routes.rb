@@ -1,6 +1,6 @@
 NonprofitamInfrastructureChecklist::Application.routes.draw do
  
-  root :to => 'checklists#index' 
+  root :to => 'pages#home' 
   
   get "logout" => "sessions#destroy", :as => "logout"
   get "login" => "sessions#new", :as => "login"

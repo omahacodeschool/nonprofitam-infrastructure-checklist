@@ -1,0 +1,29 @@
+<div id='logo'> <h1 id="namlogo"> Non-Profit Association of the Midlands</h1></div>
+
+<%if current_user == nil %>
+<div id ="login">
+<%= form_tag sessions_path do %>
+  <div class="field">
+    <%= label_tag :email %>
+    <br>
+    <%= text_field :email, params[:email] %>
+  </div>
+  <div class="field">
+    <%= label_tag :password %>
+    <br>
+    <%= password_field_tag :password %>
+  </div>
+  <div class="actions"><%= submit_tag "Log in" %></div>
+<% end %>
+</div>
+<% end %>
+<div class='content'>
+<h2>About</h2>
+<p>This Infrastructure Checklist is a quick guide to the documentation, systems, policies, 
+procedures, and support mechanisms that nonprofit organizations should have in 
+place to comply with the law, and to function effectively, efficiently, and 
+transparently. The Checklist is focused on WHAT YOU SHOULD HAVE IN PLACE rather 
+than HOW you should utilize those systems/processes. For the HOW TO, we 
+recommend you consult the Guidelines & Principles for Nonprofit Excellence in 
+Nebraska & Iowa or the Assessment Tool. </p>
+</div>
