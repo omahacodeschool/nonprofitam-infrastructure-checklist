@@ -15,11 +15,12 @@
   <h3><%= link_to "New Checklist", new_checklist_path %></h3>
 
 <% else %>
-<h1>Click a checklist to fill out!</h1>
+<div id='checklists'>
+<h2>Click a checklist to fill it out!</h2>
   <% @checklists.each do |c|%>
-	<p>
+	<h3>
   	<%= link_to c.name, edit_response_path(c.id), id: c.id %>
-	</p>
+  </h3>
 <% end %>
-
+</div>
 <% end %>
