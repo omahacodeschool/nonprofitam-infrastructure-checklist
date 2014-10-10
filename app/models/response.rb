@@ -29,11 +29,13 @@ class Response < ActiveRecord::Base
   end
   
   
-  # Public: Returns a string corresponding to the percentage that a given 
+  # Public: Returns a string corresponding to the percentage that a given answer value(value) appears in a given checklist(checklist_id) 
   #
-  # a_hash - The ActiveRecord answer_hash of a given response object
-  # answers - Array of 'values' for each 'key' in the a_hash
-  # count - counts the amount of times a given value[n] is found in "answers"
+  # value - string that this method looks for (ie. "Yes", "No", "In Progress")
+  # checklist_id - id of a Active Record checklist's associated questions that correspond to the keys in a Response object's "answer_hash"
+  #
+  # This is calculated with the current_user's response object found using the session 
+  #     ie current_user.response.id
   #
   # Examples
   #
