@@ -18,9 +18,8 @@ class ResponsesController < ApplicationController
 
   def update
     @response = current_user.response
-    # binding.pry
     @response.update_attributes(answers_hash: params[:spaceship])
-    redirect_to root_url
+    redirect_to checklists_path
     
   end
 
