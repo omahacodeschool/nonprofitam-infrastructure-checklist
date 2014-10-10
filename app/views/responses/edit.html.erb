@@ -14,15 +14,15 @@
 					  <tr>
 					    <td>Item: <%= c.description %></td>
 							<td>		
-								<%= radio_button_tag(name ="spaceship[#{c.id}]", value = "Yes", checked = false) %>
+								<%= radio_button_tag("spaceship[#{c.id}]", "Yes", (@response.answers_hash["#{c.id}"] == "Yes")) %>
 								<%= label_tag(:answers_hash, "Yes") %>
 							</td>
 							<td>
-								<%= radio_button_tag(name ="spaceship[#{c.id}]", value = "No", checked = true) %>
+								<%= radio_button_tag("spaceship[#{c.id}]", "No", (@response.answers_hash["#{c.id}"]== "No")) %>
 								<%= label_tag(:answers_hash, "No") %>
 							</td>
-							<td>a
-								<%= radio_button_tag(name ="spaceship[#{c.id}]", value = "In Progress", checked = false) %>
+							<td>
+								<%= radio_button_tag("spaceship[#{c.id}]", "In Progress", (@response.answers_hash["#{c.id}"]== "In 								Progress")) %>
 								<%= label_tag(:answers_hash, "In Progress") %>
 							</td>
 					  </tr>
@@ -35,15 +35,15 @@
 					  <tr>
 					    <td>Item: <%= c.description %></td>
 							<td>		
-								<%= radio_button_tag(name ="spaceship[#{c.id}]", value = "Yes") %>
+								<%= radio_button_tag("spaceship[#{c.id}]", "Yes", (@response.answers_hash["#{c.id}"] == "Yes")) %>
 								<%= label_tag(:answers_hash, "Yes") %>
 							</td>
 							<td>
-								<%= radio_button_tag(name ="spaceship[#{c.id}]", value = "No") %>
+								<%= radio_button_tag("spaceship[#{c.id}]", "No", (@response.answers_hash["#{c.id}"]== "No")) %>
 								<%= label_tag(:answers_hash, "No") %>
 							</td>
 							<td>
-								<%= radio_button_tag(name ="spaceship[#{c.id}]", value = "In Progress") %>
+								<%= radio_button_tag("spaceship[#{c.id}]", "In Progress", (@response.answers_hash["#{c.id}"]== "In 								Progress")) %>
 								<%= label_tag(:answers_hash, "In Progress") %>
 							</td>
 					  </tr>
@@ -56,17 +56,18 @@
 					  <tr>
 					    <td>Item: <%= c.description %></td>
 							<td>		
-								<%= radio_button_tag(name ="spaceship[#{c.id}]", value = "Yes") %>
+								<%= radio_button_tag("spaceship[#{c.id}]", "Yes", (@response.answers_hash["#{c.id}"] == "Yes")) %>
 								<%= label_tag(:answers_hash, "Yes") %>
 							</td>
 							<td>
-								<%= radio_button_tag(name ="spaceship[#{c.id}]", value = "No") %>
+								<%= radio_button_tag("spaceship[#{c.id}]", "No", (@response.answers_hash["#{c.id}"] == "No")) %>
 								<%= label_tag(:answers_hash, "No") %>
 							</td>
 							<td>
-								<%= radio_button_tag(name ="spaceship[#{c.id}]", value = "In Progress") %>
-								<%= label_tag(:answers_hash, "In Progress") %>
-							</td>
+								<td>
+									<%= radio_button_tag("spaceship[#{c.id}]", "In Progress", (@response.answers_hash["#{c.id}"] == "In 										Progress")) %>
+									<%= label_tag(:answers_hash, "In Progress") %>
+								</td>
 					  </tr>
 					</table>
 				</p>

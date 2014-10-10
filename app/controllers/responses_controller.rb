@@ -13,8 +13,6 @@ class ResponsesController < ApplicationController
 
   def edit
     @response = current_user.response
-    @checked = @response.answers_hash.to_a
-    # @response.import_checklist
     @checklist = Checklist.find(params[:id])
   end
 
