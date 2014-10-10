@@ -35,9 +35,13 @@ h1#namlogo {
 }
 
 .current_user{
-  float:right;
-  margin-top: -10px;
-  
+  width: 100%;
+  text-align: right;
+  margin-top: 5px;
+}
+
+#checklists{
+  margin: 20px auto;
 }
 
 
