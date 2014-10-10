@@ -19,6 +19,7 @@ class Response < ActiveRecord::Base
     #  counts("No")
     #   # => 3
     #
+
   def counts(n) 
     count = Hash.new(0)
     a_hash = self.answers_hash
@@ -53,6 +54,5 @@ class Response < ActiveRecord::Base
     ans.each{ |e| count[e] += 1 }
     (((count[value].to_f/Checklist.find(checklist_id).total_questions.to_f)*100).to_i).to_s + "%"
    end
-  
-    
+     
 end

@@ -1,7 +1,8 @@
 class ChecklistsController < ApplicationController
   
   def index
-    @checklists = Checklist.all 
+    @checklists = Checklist.all
+    @user = User.find(current_user.response.id)
   end
   
   def new
