@@ -5,10 +5,10 @@ class Response < ActiveRecord::Base
   belongs_to :user
   
   def total_questions(n)
-      @checklist = Checklist.find(n)
-      @total =  @checklist.questions.length
-      @total 
-    end
+    @checklist = Checklist.find(n)
+    @total =  @checklist.questions.length
+    @total 
+  end
   
   def counts(n) 
     count = Hash.new(0)

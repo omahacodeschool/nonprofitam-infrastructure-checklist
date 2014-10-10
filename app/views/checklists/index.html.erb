@@ -21,12 +21,11 @@
 	<h3>
   	<%= link_to c.name, edit_response_path(c.id), id: c.id %>
 
-		Total: <%= c.total_questions(c.id)%>
-		Yes: <%= Response.find(@user).counts("Yes") %>
-		No: <%= Response.find(@user).counts("No") %>
-		In Progress: <%= Response.find(@user).counts("In Progress") %>
-		% Completed: <%= ((Response.find(@user).counts("Yes").to_f)/(c.total_questions(c.id).to_f) * 100) %>%
-	</p>
+		Total Questions: <%= c.total_questions(c.id)%>
+		Yes: <%= Response.find(@user).percent("Yes", c.id) %>
+		No: <%= Response.find(@user).percent("No", c.id) %>
+		In Progress: <%= Response.find(@user).percent("In Progress", c.id) %>
+		</p>
 
 <% end %>
 </div>
