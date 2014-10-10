@@ -6,15 +6,28 @@ $body-font:'Roboto Condensed', sans-serif;
 $header-font: 'Raleway', sans-serif;;
 
 h2{
-  font: 20px $header-font;
+  font: 24px $header-font;
   color: $nam-blue;
   letter-spacing: .5px;
   //text-transform: uppercase;
 }
 
+h3{
+  font: 20px $body-font;
+  
+}
+
 p {
   font: 16px $body-font;
   
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: #000;
 }
 
 
