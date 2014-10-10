@@ -19,7 +19,8 @@
 <h2>Click a checklist to fill it out!</h2>
   <% @checklists.each do |c|%>
 	<h3>
-  	<%= link_to c.name, edit_response_path(c.id), id: c.id %>
+  	<%= link_to c.name, edit_response_path(c.id), id: c.id %> 
+    
   </h3>
 <% end %>
 </div>
