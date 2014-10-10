@@ -1,3 +1,4 @@
+
 body{
   width: 95%;
   margin: 0 auto;
@@ -8,6 +9,12 @@ body{
   padding-top:30px;
 }
 
+content{
+  width: 90%;
+  padding-top: 30px;
+  
+}
+
 
 h1#namlogo {
   width: 100%; 
@@ -16,24 +23,39 @@ h1#namlogo {
   background-position: left center; 
   background: url("/Nam_Logo.png") no-repeat;
   background-size: 100%;
-  float: left;
   text-indent: -9999px;
   z-index: -2;
 }
 
+
+#login{
+  width: 80%;
+  margin: 0 auto;
+  padding: 5%;
+}
+
+.current_user{
+  float:right;
+  margin-top: -10px;
+  
+}
+
+
 input{
-  width:50%;
+  width:100%;
+  margin: 10px auto;
   border: none;
-  background-color: ;
+  background-color: #ddd;
   text-align: center;
-  font-size:15px;
+  font-size: 15px;
   height: 30px;
-  border-radius: 10px;
+  border-radius: 2px;
+  
 }
    
 input.submit {
   font-size: 20px;
-  width:200px;
+  width:50%;
   border-radius:5px;
   background-color: $nam-grey;
   opacity: .80;
