@@ -1,16 +1,17 @@
-<h1><%= @checklist.name %></h1>
+<h2><%= @checklist.name %></h2>
 
 
 <!-- <%= @response.answers_hash.to_a %> -->
 
-
+<br>
+<br>
 <%= form_for @response do |f| %>
     
 <% priorities = ['Required', 'Strongly Recommended', 'Recommended'] %>
    
 <% priorities.each do |p| %>
 
-<h2> <%= p %></h2>
+<h3> <%= p %></h3>
 <% @checklist.questions.where(priority: p).each do |q| %>
 
 <table>
