@@ -13,4 +13,9 @@ class Response < ActiveRecord::Base
     count[n]
   end
   
+  # def percent(counts(n))
+  #   percent = count(n) * 100
+  # end
+    
+  
 end

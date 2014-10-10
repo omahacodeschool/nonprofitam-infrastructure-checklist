@@ -22,7 +22,10 @@
   	<%= link_to c.name, edit_response_path(c.id), id: c.id %>
 
 		<%= c.total_c_questions(c.id)%>
-		<%= c.yes_response(c.id)%>
+		<%= Response.find(@user).counts("Yes") %>
+		<%= Response.find(@user).counts("No") %>
+		<%= Response.find(@user).counts("In Progress") %>
+		<%= ((Response.find(@user).counts("Yes").to_f)/(c.total_c_questions(c.id).to_f) * 100) %>
 	</p>
 
 <% end %>
