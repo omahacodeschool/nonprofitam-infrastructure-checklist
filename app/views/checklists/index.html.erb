@@ -19,7 +19,12 @@
 <h2>Click a checklist to fill it out!</h2>
   <% @checklists.each do |c|%>
 	<h3>
-  	<%= link_to c.name, edit_response_path(c.id), id: c.id %> 
+  	<%= link_to c.name, edit_response_path(c.id), id: c.id %>
+
+		Total Questions: <%= c.total_questions %>
+		Yes: <%= Response.find(@user).percent("Yes", c.id) %>
+		No: <%= Response.find(@user).percent("No", c.id) %>
+		In Progress: <%= Response.find(@user).percent("In Progress", c.id) %>
     
   </h3>
 <% end %>
