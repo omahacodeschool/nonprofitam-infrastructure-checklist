@@ -55,7 +55,37 @@ class Response < ActiveRecord::Base
     end
     count = Hash.new(0)
     ans.each{ |e| count[e] += 1 }
+    
     (((count[value].to_f/Checklist.find(checklist_id).total_questions.to_f)*100).to_i).to_s + "%"
    end
+   
+   def percentage_for_checklist(checklist_id)
+     checklist = Checklist.find(checklist_id)
+     
+     # Hash, keys are priorities and values are question ids
+     priorities_and_questions = checklist.priorities_and_questions
+     
+     priorities_and_questions_answers = {"Required"=>{}, "Strongly Recommended"=>{}, "Recommended"=> {}}
+     
+     priorities_and_questions.each do |p,qs|
+       qs.each do |q|
+         priorities_and_questions_answers[p][q]=self.answers_hash[q.to_s]
+       end 
+     end
+     
+     priorities_percentages = {
+       "Required"=> {"Yes"=> 0, "No"=> 0, "In Progress"=> 0},
+       "Strongly Recommended"=> {"Yes"=> 0, "No"=> 0, "In Progress"=> 0},
+       "Recommended"=> {"Yes"=> 0, "No"=> 0, "In Progress"=> 0}
+     }
+     binding.pry
+     # priorities_and_questions_answers.each do |p, qa|
+   #     qa.each do |q, a|
+   #       priorities_percentages[p]["Yes"] = 0
+     
+    
+   end
+   
+   
      
 end

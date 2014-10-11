@@ -19,7 +19,25 @@ class Checklist < ActiveRecord::Base
   def total_questions
       total =  self.questions.length
       total 
+  end
+  
+  def total_questions_of_priority(priority)
+    
+    self.questions.where(priority: priority).length
+    
+  end
+  
+  def priorities_and_questions
+    pq = {"Required" => [], "Strongly Recommended" => [], "Recommended" => []}
+
+    self.questions.each do |q|
+      pq[q.priority] << q.id
     end
+    pq
+  end
+  
+ 
+  
   
 
 end
