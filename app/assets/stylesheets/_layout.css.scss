@@ -52,7 +52,7 @@ input{
   background-color: #ddd;
   text-align: center;
   font-size: 15px;
-  height: 30px;
+  height: 20px;
   border-radius: 2px;
   
 }
@@ -60,7 +60,8 @@ input{
 input.submit {
   font-size: 20px;
   width:50%;
+  height: 30px;
   border-radius:5px;
-  background-color: $nam-grey;
-  opacity: .80;
+  background-color: $nam-yellow; opacity: .60;
+
 }
